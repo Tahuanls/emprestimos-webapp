@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/assets/todo-list.js"></script>
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    <title>TO-DO list</title>
+</head>
+<body>
+    <div id="todo-table">
+        <form>
+            <input id="input_chave" type="text" name="chave" placeholder="chave" required />
+            <input id="input_nome" type="text" name="nome" placeholder="nome" required />
+            <input id="input_turma" type="text" name="turma" placeholder="turma" required />
+            <button type="submit">Add item</button>
+            <button type="button"> Limpar</button>
+        </form>
+        <div>
+            <% for (let i = 0; i < todos.length; i++){ %>
+                <div class="unique-todo" style="float: right; width: 100%;">
+                    <p class="todo-sub">01/11/2019</p>
+                    <p class="todo-sub chave" style="width: 2.5%;"><%=todos[i].chave%></p>
+                    <p class="todo-sub" style="width: 30%;"><%=todos[i].nome%></p>
+                    <p class="todo-sub">MA212</p>
+                    <p class="todo-sub">10:33:00</p>
+                    <p class="todo-sub">10:33:00</p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
